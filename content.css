@@ -106,28 +106,31 @@ th{
 }
 
 th, td{
-    padding: 10px 30px;
+    padding: 7px 30px;
     text-align: left;
 }
 
 .edit_item, .delete_item{
-    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.th_center{
-    text-align: center;
-}
-
-.edit_item:hover, .delete_item:hover{
+.table_icon{
+    width: 30px;
     cursor: pointer;
+    transition: .1s ease;
 }
 
-.delete_item{
-    background-color: salmon;
+#edit_img:hover{
+    fill: rgb(114, 162, 250);
 }
 
-.edit_item{
-    background-color: #eee;
+#delete_img{
+    width: 25px;
+}
+
+#delete_img:hover{
+    fill: salmon;
 }
 
 .data tr{

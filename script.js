@@ -10,3 +10,5 @@ function toggleModal(event) {
         $('.modal-background').css('display', 'none')
     })
 } 
+
+
