@@ -4,14 +4,14 @@ export default class BookController {
         this.view = view;
         this.data = this.model.getBooks();
         this.url = '../../data/books.json';
+        this.editable = null;
     }
 
     parseData(form_array){
-        let obj = {};
+        let obj = {id: this.data.length + 1};
         for (let i = 0; i < form_array.length; i++){
             obj[form_array[i]['name']] = form_array[i]['value'];
         }
-        obj.id = parseInt(obj.id);
         return obj;
     }
 
@@ -21,10 +21,33 @@ export default class BookController {
                 this.view.printAllBooks(data);
                 let data_for_storage = JSON.stringify(data);
                 localStorage.setItem('book_data', data_for_storage);
+                this.data = this.model.getBooks();
             })
         } else{ 
-            localStorage.getItem('book_data');
             this.view.printAllBooks(this.data);
         }
     }
+
+    addBook(){
+        this.editable = false;
+    }
+
+    editBook(){
+        this.editable = true;
+    }
+
+    save(form){
+        console.log(form);
+        console.log(this.editable);
+        if (this.editable) {
+            this.model.editBookInStorage();
+        } else {
+            let data = form.serializeArray();
+            let new_book_data = this.parseData(data);
+            console.log(new_book_data);
+            this.model.addBookToStorage(new_book_data);
+        }
+        this.init();
+    }
+
 }

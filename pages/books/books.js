@@ -10,12 +10,24 @@ const bookView = new BookView(container);
 const bookController = new BookController(bookModel, bookView);
 bookController.init();
 
+$('#add_btn').click(function() {
+    bookController.addBook();
+})
+
+$('.edit_item').click(function() {
+    bookController.editBook();
+})
+
+function closeModal() {
+    $('.modal-background').css('display', 'none')
+}
+
 $('#book_form').submit(function(event) {
     event.preventDefault();
-
-    let new_book = $(this).serializeArray();
-    console.log(new_book);
+    
+    bookController.save($(this));
+    closeModal();
+    $('#book_form')[0].reset();
 
     return false;
 })
-
