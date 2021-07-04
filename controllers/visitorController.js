@@ -59,4 +59,22 @@ export default class VisitorController {
         }
         this.init();
     }
+
+    search(search_string) {
+        // let item = this.model.searchInStorage(search_string);
+        this.view.printAllVisitors(item);
+
+        let search_string = $('#search').val();
+        console.log(search_string);
+
+        let item = [];
+        let searchField = "name";
+        let searchVal = search_string;
+        for (var i=0 ; i < obj.list.length ; i++) {
+            if (obj.list[i][searchField] == searchVal) {
+                item.push(obj.list[i]);
+            }
+        }
+        
+    }
 }

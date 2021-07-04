@@ -39,4 +39,10 @@ export default class VisitorModel {
         this.data.push(new_visitor_data);
         localStorage.setItem('visitor_data', JSON.stringify(this.data));
     }
+
+    searchInStorage(){
+
+        return data;
+
+    }
 } 

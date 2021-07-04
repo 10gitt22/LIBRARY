@@ -38,3 +38,8 @@ $('#visitor_form').submit(function(event) {
 
     return false;
 })
+
+$('#search_btn').click(function() {
+    visitorController.search();
+
+})
