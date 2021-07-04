@@ -4,7 +4,6 @@ export default class BookView {
     }
 
     printAllBooks(data){
-        
         let table = $('#books');
         let str = ``;
         data.forEach(book => {
