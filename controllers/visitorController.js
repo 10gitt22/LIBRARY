@@ -63,4 +63,9 @@ export default class VisitorController {
         }
         this.init();
     }
+
+    sortController(selected_value){
+        this.model.sort_data(selected_value)
+        this.init();
+    }
 }

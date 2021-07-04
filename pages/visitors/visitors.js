@@ -36,3 +36,9 @@ $('#visitor_form').submit(function(event) {
 function closeModal() {
     $('.modal-background').css('display', 'none')
 }
+
+$("#sort_btn").click(function(e){
+    let value = $("#sort option:selected").text() ;
+    visitorController.sortController(value)
+    console.log(value);
+})
