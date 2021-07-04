@@ -4,7 +4,7 @@ export default class VisitorController {
         this.view = view;
         this.data = this.model.getVisitors();
         this.url = '../../data/visitors.json';
-        this.editable = null;
+        this.editable = false;
         this.editable_item = null;
     }
 
@@ -20,8 +20,10 @@ export default class VisitorController {
         if (!localStorage.getItem('visitor_data')){
             this.model.getDataFromFile(this.url).then(data => {
                 this.view.printAllVisitors(data);
+
                 let data_for_storage = JSON.stringify(data);
                 localStorage.setItem('visitor_data', data_for_storage);
+                
                 this.data = this.model.getVisitors();
             })
         } else{ 
@@ -43,19 +45,21 @@ export default class VisitorController {
     }
 
     save(form){
-        console.log(form);
-        console.log(this.editable);
-        if (this.editable) {
-            let edited_visitor_data = form.serializeArray();
-            edited_visitor_data = this.parseData(edited_visitor_data);
-            edited_visitor_data.id = parseInt(edited_visitor_data.id);
-            this.model.editVisitorInStorage(edited_visitor_data);
-        } else {
-            let data = form.serializeArray();
-            let new_visitor_data = this.parseData(data);
-            new_visitor_data.id = this.data.length + 1;
-            console.log(new_visitor_data);
-            this.model.addVisitorToStorage(new_visitor_data);
+        let data = form.serializeArray();
+        let new_visitor_data = this.parseData(data);
+        
+        switch (this.editable) {
+            case true:
+                new_visitor_data.id = parseInt(new_visitor_data.id);
+                this.model.editVisitorInStorage(new_visitor_data);
+                break;
+            case false:
+                new_visitor_data.id = this.data.length + 1;
+                this.model.addVisitorToStorage(new_visitor_data)
+                break;
+        
+            default:
+                break;
         }
         this.init();
     }

@@ -13,21 +13,15 @@ const cleave = new Cleave('.formatted-phone', {
     phone: true,
     phoneRegionCode: 'UA'
 });
-console.log(cleave);
 
-$('#add_btn').click(function() {
+$(document).on('click','#add_btn', function(e) {
     visitorController.addVisitor();
 })
 
-$('.edit_item').click(function() {
+$(document).on('click', '.edit_item', function() {
     let id = $(this).data().id;
-    console.log(id);
     visitorController.editVisitor(id);
 })
-
-function closeModal() {
-    $('.modal-background').css('display', 'none')
-}
 
 $('#visitor_form').submit(function(event) {
     event.preventDefault();
@@ -38,3 +32,7 @@ $('#visitor_form').submit(function(event) {
 
     return false;
 })
+
+function closeModal() {
+    $('.modal-background').css('display', 'none')
+}

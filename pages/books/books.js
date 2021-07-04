@@ -11,11 +11,11 @@ const bookController = new BookController(bookModel, bookView);
 bookController.init();
 
 
-$('#add_btn').click(function() {
+$(document).on('click', '#add_btn', function() {
     bookController.addBook();
 })
 
-$('.edit_item').click(function() {
+$(document).on('click', '.edit_item', function() {
     bookController.editBook();
 })
 

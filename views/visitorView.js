@@ -4,7 +4,6 @@ export default class VisitorView {
     }
 
     printAllVisitors(data){
-        console.log(data);
         let table = $('#visitors');
         let str = ``;
         data.forEach(visitor => {

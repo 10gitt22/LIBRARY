@@ -8,7 +8,7 @@ export default class BookController {
     }
 
     parseData(form_array){
-        let obj = {id: this.data.length + 1};
+        let obj = {};
         for (let i = 0; i < form_array.length; i++){
             obj[form_array[i]['name']] = form_array[i]['value'];
         }
@@ -43,17 +43,21 @@ export default class BookController {
     }
 
     save(form){
-        console.log(this.editable);
-        if (this.editable) {
-            this.model.editBookInStorage();
-        } else {
-            let data = form.serializeArray();
-            console.log(data);
-            let new_book_data = this.parseData(data);
-            console.log(new_book_data);
-            this.model.addBookToStorage(new_book_data);
+        let data = form.serializeArray();
+        let new_book_data = this.parseData(data);
+
+        switch (this.editable) {
+            case true:
+                this.model.editBookInStorage();
+                break;
+            case false:
+                new_book_data.id = this.data.length + 1;
+                this.model.addBookToStorage(new_book_data);
+                break;
+        
+            default:
+                break;
         }
         this.init();
     }
-
 }
