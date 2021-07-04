@@ -33,8 +33,18 @@ export default class BookController {
         this.editable = false;
     }
 
-    editBook(){
+    editBook(id){
         this.editable = true;
+        let editable_item = this.model.getBookInStorage(id);
+
+        $('#book_id').val(editable_item.id);
+        $('#name').val(editable_item.name);
+        $('#author').val(editable_item.author);
+        $('#year').val(editable_item.year);
+        $('#publisher').val(editable_item.publisher);
+        $('#pages').val(editable_item.pages);
+        $('#count').val(editable_item.count);
+
     }
 
     deleteBook(id) {
@@ -48,7 +58,8 @@ export default class BookController {
 
         switch (this.editable) {
             case true:
-                this.model.editBookInStorage();
+                new_book_data.id = parseInt(new_book_data.id);
+                this.model.editBookInStorage(new_book_data);
                 break;
             case false:
                 new_book_data.id = this.data.length + 1;

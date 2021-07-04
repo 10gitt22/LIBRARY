@@ -36,3 +36,8 @@ $('#visitor_form').submit(function(event) {
 function closeModal() {
     $('.modal-background').css('display', 'none')
 }
+
+$(document).on('click', '#search_btn', function() {
+    
+    visitorController.search();
+})

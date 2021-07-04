@@ -38,9 +38,9 @@ export default class VisitorModel {
         localStorage.setItem('visitor_data', JSON.stringify(this.data));
     }
 
-    searchInStorage(){
+    // searchInStorage(){
 
-        return data;
+    //     return data;
 
-    }
+    // }
 } 

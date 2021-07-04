@@ -16,7 +16,9 @@ $(document).on('click', '#add_btn', function() {
 })
 
 $(document).on('click', '.edit_item', function() {
-    bookController.editBook();
+    let id = $(this).data().id;
+    console.log(id);
+    bookController.editBook(id);
 })
 
 $(document).on('click', '.delete_item', function() {
