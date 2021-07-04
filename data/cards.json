@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "visitor": "Ruslan Malinovskyi",
+        "book": "Kobzar",
+        "borrow_date": "03.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 2,
+        "visitor": "Oleksandr Zinchenko",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 3,
+        "visitor": "Zlatan Ibrahinovic",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": null
+    }
+]
