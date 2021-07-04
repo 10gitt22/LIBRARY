@@ -10,6 +10,7 @@ const bookView = new BookView(container);
 const bookController = new BookController(bookModel, bookView);
 bookController.init();
 
+
 $('#add_btn').click(function() {
     bookController.addBook();
 })
@@ -18,9 +19,10 @@ $('.edit_item').click(function() {
     bookController.editBook();
 })
 
-function closeModal() {
-    $('.modal-background').css('display', 'none')
-}
+$(document).on('click', '.delete_item', function() {
+    let id = $(this).data().id;
+    bookController.deleteBook(id);
+})
 
 $('#book_form').submit(function(event) {
     event.preventDefault();
@@ -31,3 +33,8 @@ $('#book_form').submit(function(event) {
 
     return false;
 })
+
+function closeModal() {
+    $('.modal-background').css('display', 'none')
+}
+

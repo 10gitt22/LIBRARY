@@ -24,6 +24,7 @@ export default class BookController {
                 this.data = this.model.getBooks();
             })
         } else{ 
+            this.data = this.model.getBooks();
             this.view.printAllBooks(this.data);
         }
     }
@@ -36,13 +37,18 @@ export default class BookController {
         this.editable = true;
     }
 
+    deleteBook(id) {
+        this.model.deleteBookFromStorage(id);
+        this.init();
+    }
+
     save(form){
-        console.log(form);
         console.log(this.editable);
         if (this.editable) {
             this.model.editBookInStorage();
         } else {
             let data = form.serializeArray();
+            console.log(data);
             let new_book_data = this.parseData(data);
             console.log(new_book_data);
             this.model.addBookToStorage(new_book_data);
