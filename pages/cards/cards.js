@@ -8,3 +8,17 @@ const cardModel = new CardModel();
 const cardView = new CardView(container);
 const cardController = new CardController(cardModel, cardView);
 cardController.init();
+
+// $('#visitor_form').submit(function(event) {
+//     event.preventDefault();
+
+//     visitorController.save($(this));
+//     closeModal();
+//     $('#visitor_form')[0].reset();
+
+//     return false;
+// })
+
+// function closeModal() {
+//     $('.modal-background').css('display', 'none')
+// }

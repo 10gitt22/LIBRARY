@@ -9,12 +9,32 @@
     <title>Cards</title>
 </head>
 <body>
+    <div class="modal-background">
+        <div class="modal">
+            <div class="modal-close"><svg id="close_modal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve"> <g> <g> <path d="M294.111,256.001L504.109,46.003c10.523-10.524,10.523-27.586,0-38.109c-10.524-10.524-27.587-10.524-38.11,0L256,217.892 L46.002,7.894c-10.524-10.524-27.586-10.524-38.109,0s-10.524,27.586,0,38.109l209.998,209.998L7.893,465.999 c-10.524,10.524-10.524,27.586,0,38.109c10.524,10.524,27.586,10.523,38.109,0L256,294.11l209.997,209.998 c10.524,10.524,27.587,10.523,38.11,0c10.523-10.524,10.523-27.586,0-38.109L294.111,256.001z"/> </g> </g> </svg></div>
+            <form id="visitor_form">
+                <h1 class="title">Visitor:</h1>
+                <input type="hidden" id="card_id" name="id">
+                <div class="field">
+                    <label for="visitor">Visitor:</label>
+                    <select name="visitor" id="visitor" class="inp-field"></select>
+                </div>
+                <div class="field">
+                    <label for="book">Book:</label>
+                    <select name="book" id="book" class="inp-field"></select>
+                </div>
+
+                <button class="btn" id="save_btn">Save</button>
+            </form>
+        </div>
+    </div>
     <div class="container">
         <header>
             <div class="burger-block">
                 <svg class="icon burger" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve"> <g> <g> <g> <rect x="0" y="277.333" width="384" height="42.667"/> <rect x="0" y="170.667" width="384" height="42.667"/> <rect x="0" y="64" width="384" height="42.667"/> </g> </g> </g> </svg>
             </div>
             <div class="header-logo">Cards</div>
+            <button class="btn" id="add_btn" onclick="toggleModal(event)">+ add new card</button>
         </header>
         <main>
             <div class="sidebar-menu">
