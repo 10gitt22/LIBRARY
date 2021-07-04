@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Ruslan Malinovskyi",
+        "phone": "067 456 76 55"
+    },
+    {
+        "id": 2,
+        "name": "Oleksandr Zinchenko",
+        "phone": "099 762 33 12"
+    },
+    {
+        "id": 3,
+        "name": "Andriy Yarmolenko",
+        "phone": "068 331 12 95"
+    },
+    {
+        "id": 4,
+        "name": "Taras Stepanenko",
+        "phone": "063 010 43 43"
+    },
+    {
+        "id": 5,
+        "name": "Vitaliy Mykolenko",
+        "phone": "067 955 34 76"
+    },
+    {
+        "id": 6,
+        "name": "Artem Dovbyk",
+        "phone": "096 153 47 90"
+    },
+    {
+        "id": 7,
+        "name": "Roman Yaremchuk",
+        "phone": "066 342 70 55"
+    },
+    {
+        "id": 8,
+        "name": "Viktor Tsygankov",
+        "phone": "063 742 01 12"
+    },
+    {
+        "id": 9,
+        "name": "Georgiy Bushchan",
+        "phone": "067 131 21 99"
+    },
+    {
+        "id": 10,
+        "name": "Serhiy Sydorchuk",
+        "phone": "095 710 95 25"
+    },
+    {
+        "id": 11,
+        "name": "Artem Besiedin",
+        "phone": "097 450 00 91"
+    },
+    {
+        "id": 12,
+        "name": "Yevhen Makarenko",
+        "phone": "097 882 88 12"
+    }
+]

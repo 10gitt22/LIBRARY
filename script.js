@@ -3,7 +3,6 @@ $('.burger-block').click(function() {
 })
 
 function toggleModal(event) {
-
     $('.modal-background').css('display', 'flex');
     $('.modal-close').click(function() {
         $('.modal-background').css('display', 'none')
