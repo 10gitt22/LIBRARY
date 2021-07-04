@@ -4,7 +4,6 @@ import BookController from "../../controllers/bookController.js";
 
 const container = $('.table-section');
 
-
 const bookModel = new BookModel();
 const bookView = new BookView(container);
 const bookController = new BookController(bookModel, bookView);
@@ -26,6 +25,12 @@ $(document).on('click', '.delete_item', function() {
     bookController.deleteBook(id);
 })
 
+$(document).on('click', '#sort_btn', function() {
+    let value = $("#sort option:selected").text() ;
+    bookController.sortController(value)
+    console.log(value);
+})
+
 $('#book_form').submit(function(event) {
     event.preventDefault();
     
@@ -40,9 +45,4 @@ function closeModal() {
     $('.modal-background').css('display', 'none')
 }
 
-$("#sort_btn").click(function(e){
-    let value = $("#sort option:selected").text() ;
-    bookController.sortController(value)
-    console.log(value);
-})
 

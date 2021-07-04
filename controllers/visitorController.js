@@ -7,7 +7,6 @@ export default class VisitorController {
         this.editable = false;
         this.editable_item = null;
     }
-
     parseData(form_array){
         let obj = {};
         for (let i = 0; i < form_array.length; i++){
@@ -15,7 +14,6 @@ export default class VisitorController {
         }
         return obj;
     }
-
     init(){
         if (!localStorage.getItem('visitor_data')){
             this.model.getDataFromFile(this.url).then(data => {
@@ -41,7 +39,6 @@ export default class VisitorController {
         $('#name').val(editable_item.name);
         $('#phone').val(editable_item.phone);  
     }
-
     save(form){
         let data = form.serializeArray();
         let new_visitor_data = this.parseData(data);

@@ -23,6 +23,12 @@ $(document).on('click', '.edit_item', function() {
     visitorController.editVisitor(id);
 })
 
+$(document).on('click', '#sort_btn', function() {
+    let value = $("#sort option:selected").text();
+    visitorController.sortController(value)
+    console.log(value);
+})
+
 $('#visitor_form').submit(function(event) {
     event.preventDefault();
 
@@ -36,9 +42,3 @@ $('#visitor_form').submit(function(event) {
 function closeModal() {
     $('.modal-background').css('display', 'none')
 }
-
-$("#sort_btn").click(function(e){
-    let value = $("#sort option:selected").text() ;
-    visitorController.sortController(value)
-    console.log(value);
-})

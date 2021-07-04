@@ -18,7 +18,6 @@ export default class BookModel {
         this.getDataFromStorage();
         return this.data;
     }
-
     getBookInStorage(id){
         let editable_item = this.data.find(book => book.id == id);
         return editable_item;
@@ -40,46 +39,43 @@ export default class BookModel {
         localStorage.setItem('book_data', JSON.stringify(this.data));
     }
 
-    
-
     deleteBookFromStorage(id){
         let filtered_arr = this.data.filter(book => book.id != id);
         this.data = filtered_arr;
         localStorage.setItem('book_data', JSON.stringify(this.data))
     }
-
-    SortByName(a, b){
-        var aName = a.name.toLowerCase();
-        var bName = b.name.toLowerCase(); 
-        return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
-      }
+    sortByName(a, b){
+        var a_name = a.name.toLowerCase();
+        var b_name = b.name.toLowerCase(); 
+        return ((a_name < b_name) ? -1 : ((a_name > b_name) ? 1 : 0));
+    }
       
-     SortByAuthor(a, b){
-        var aName = a.author.toLowerCase();
-        var bName = b.author.toLowerCase(); 
-        return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
-      }
+    sortByAuthor(a, b){
+        var a_author = a.author.toLowerCase();
+        var b_author = b.author.toLowerCase(); 
+        return ((a_author < b_author) ? -1 : ((a_author > b_author) ? 1 : 0));
+    }
     
-     SortByCount(a, b){
-        var aName = a.count;
-        var bName = b.count;
-        return ((aName > bName) ? -1 : ((aName < bName) ? 1 : 0));
-      }
-      sort_data(value){
-          switch (value) {
-              case "name":
-                this.data = this.data.sort(this.SortByName)
+    sortByCount(a, b){
+        var a_count = a.count;
+        var b_count = b.count;
+        return ((a_count > b_count) ? -1 : ((a_count < b_count) ? 1 : 0));
+    }
+    sort_data(value){
+        switch (value) {
+            case "name":
+                this.data = this.data.sort(this.sortByName)
                 break;
-              case "author":
-                this.data = this.data.sort(this.SortByAuthor)
+            case "author":
+                this.data = this.data.sort(this.sortByAuthor)
                 break;
-              case "count":
-                this.data = this.data.sort(this.SortByCount)
+            case "count":
+                this.data = this.data.sort(this.sortByCount)
                 break;
-          
-              default:
-                  break;
-          }
-          localStorage.setItem('book_data', JSON.stringify(this.data))
-      }
+        
+            default:
+                break;
+        }
+        localStorage.setItem('book_data', JSON.stringify(this.data))
+    }
 } 

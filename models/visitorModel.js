@@ -18,7 +18,6 @@ export default class VisitorModel {
         this.getDataFromStorage();
         return this.data;
     }
-
     getVisitorInStorage(id){
         let editable_item = this.data.find(visitor => visitor.id == id);
         return editable_item;
@@ -37,32 +36,28 @@ export default class VisitorModel {
         this.data.push(new_visitor_data);
         localStorage.setItem('visitor_data', JSON.stringify(this.data));
     }
-
-    SortByName(a, b){
-        var aName = a.name.toLowerCase();
-        var bName = b.name.toLowerCase(); 
-        return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
-      }
-
-      SortById(a, b){
-        var aId = a.id;
-        var bId = b.id;
-        return ((aId < bId) ? -1 : ((aId > bId) ? 1 : 0));
-      }
-
-      sort_data(value){
+    sortById(a, b){
+        var a_id = a.id;
+        var b_id = b.id;
+        return ((a_id < b_id) ? -1 : ((a_id > b_id) ? 1 : 0));
+    }
+    sortByName(a, b){
+        var a_name = a.name.toLowerCase();
+        var b_name = b.name.toLowerCase(); 
+        return ((a_name < b_name) ? -1 : ((a_name > b_name) ? 1 : 0));
+    }
+    sort_data(value){
         switch (value) {
             case "id":
-                this.data = this.data.sort(this.SortById)
+                this.data = this.data.sort(this.sortById)
                 break;
             case "name":
-              this.data = this.data.sort(this.SortByName)
-              break;
+                this.data = this.data.sort(this.sortByName)
+                break;
 
             default:
                 break;
         }
         localStorage.setItem('visitor_data', JSON.stringify(this.data))
     }
-
 } 
