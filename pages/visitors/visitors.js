@@ -37,7 +37,8 @@ function closeModal() {
     $('.modal-background').css('display', 'none')
 }
 
-$(document).on('click', '#search_btn', function() {
-    
-    visitorController.search();
+$("#sort_btn").click(function(e){
+    let value = $("#sort option:selected").text() ;
+    visitorController.sortController(value)
+    console.log(value);
 })

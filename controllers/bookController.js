@@ -71,4 +71,45 @@ export default class BookController {
         }
         this.init();
     }
+
+    sortController(selected_value){
+        this.model.sort_data(selected_value)
+        this.init();
+    }
+
+    SortByName(a, b){
+        var aName = a.name.toLowerCase();
+        var bName = b.name.toLowerCase(); 
+        return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+      }
+      
+     SortByAuthor(a, b){
+        var aName = a.author.toLowerCase();
+        var bName = b.author.toLowerCase(); 
+        return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+      }
+    
+     SortByCount(a, b){
+        var aName = a.count;
+        var bName = b.count;
+        return ((aName > bName) ? -1 : ((aName < bName) ? 1 : 0));
+      }
+      sort_data(value){
+          switch (value) {
+              case "name":
+                this.data = this.data.sort(this.SortByName)
+                break;
+              case "author":
+                this.data = this.data.sort(this.SortByAuthor)
+                break;
+              case "count":
+                this.data = this.data.sort(this.SortByCount)
+                break;
+          
+              default:
+                  break;
+          }
+          localStorage.setItem('book_data', JSON.stringify(this.data))
+      }
+
 }

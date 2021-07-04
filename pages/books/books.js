@@ -40,3 +40,9 @@ function closeModal() {
     $('.modal-background').css('display', 'none')
 }
 
+$("#sort_btn").click(function(e){
+    let value = $("#sort option:selected").text() ;
+    bookController.sortController(value)
+    console.log(value);
+})
+
