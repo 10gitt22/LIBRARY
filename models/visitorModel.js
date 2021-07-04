@@ -21,21 +21,19 @@ export default class VisitorModel {
 
     getVisitorInStorage(id){
         let editable_item = this.data.find(visitor => visitor.id == id);
-        
-
         return editable_item;
     }
 
     editVisitorInStorage(visitor) {
         let editable_item = this.getVisitorInStorage(visitor.id);
         let index = this.data.indexOf(editable_item);
+
         this.data.splice(index, 1, visitor);
-        console.log(this.data);
+
         localStorage.setItem('visitor_data', JSON.stringify(this.data));
     }
 
     addVisitorToStorage(new_visitor_data){
-        console.log(new_visitor_data);
         this.data.push(new_visitor_data);
         localStorage.setItem('visitor_data', JSON.stringify(this.data));
     }

@@ -10,13 +10,31 @@ const bookView = new BookView(container);
 const bookController = new BookController(bookModel, bookView);
 bookController.init();
 
+
+$(document).on('click', '#add_btn', function() {
+    bookController.addBook();
+})
+
+$(document).on('click', '.edit_item', function() {
+    bookController.editBook();
+})
+
+$(document).on('click', '.delete_item', function() {
+    let id = $(this).data().id;
+    bookController.deleteBook(id);
+})
+
 $('#book_form').submit(function(event) {
     event.preventDefault();
-
-    let new_book = $(this).serializeArray();
-    console.log(new_book);
+    
+    bookController.save($(this));
+    closeModal();
+    $('#book_form')[0].reset();
 
     return false;
 })
 
-//teeeest
+function closeModal() {
+    $('.modal-background').css('display', 'none')
+}
+
