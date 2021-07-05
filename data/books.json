@@ -37,15 +37,6 @@
     },
     {
         "id": 5,
-        "name": "Harry Potter and the Philosopher's Stone",
-        "author": "J.R.R. Tolkien",
-        "year": 1937,
-        "publisher": "George Allen & Unwin",
-        "pages": 310,
-        "count": 1
-    },
-    {
-        "id":6,
         "name": "The Little Prince",
         "author": "Antoine de Saint-Exupéry",
         "year": 1943,
@@ -54,7 +45,7 @@
         "count": 2
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "Me Befor You",
         "author": "Jojo Moyes",
         "year": 2012,
@@ -63,7 +54,7 @@
         "count": 5
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "The Secret",
         "author": "Rhonda Byrne",
         "year": 2006,
@@ -72,7 +63,7 @@
         "count": 5
     },
     {
-        "id": 9,
+        "id": 8,
         "name": "Da Vince Code",
         "author": "Dan Brown",
         "year": 2003,
@@ -81,7 +72,7 @@
         "count": 2
     },
     {
-        "id": 10,
+        "id": 9,
         "name": "Fifty Shades of Grey",
         "author": "E. L. James",
         "year": 2011,
@@ -90,7 +81,7 @@
         "count": 1
     },
     {
-        "id": 11,
+        "id": 10,
         "name": "The Girl On The Train",
         "author": "Paula Hawkins",
         "year": 2015,
@@ -99,7 +90,7 @@
         "count": 8
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Mockingjay",
         "author": "Tim O'Brien",
         "year": 2010,
@@ -108,7 +99,7 @@
         "count": 7
     },
     {
-        "id": 13,
+        "id": 12,
         "name": "Dear John",
         "author": "Nicholas Sparks",
         "year": 2007,
@@ -117,7 +108,7 @@
         "count": 8
     },
     {
-        "id": 14,
+        "id": 13,
         "name": "Ready Player One",
         "author": "Ernest Cline",
         "year": 2011,
@@ -126,7 +117,7 @@
         "count": 6
     },
     {
-        "id": 15,
+        "id": 14,
         "name": "The 5th Wave",
         "author": "Rick Yancey",
         "year": 2013,
@@ -135,7 +126,7 @@
         "count": 5
     },
     {
-        "id": 16,
+        "id": 15,
         "name": "Savages",
         "author": "Don Winslow",
         "year": 2010,
@@ -144,7 +135,7 @@
         "count": 3
     },
     {
-        "id": 17,
+        "id": 16,
         "name": "The Fellowship Of The Ring",
         "author": "J.R.R. Tolkien",
         "year": 1954,
@@ -153,7 +144,7 @@
         "count": 4
     },
     {
-        "id": 18,
+        "id": 17,
         "name": "The Great Gatsby",
         "author": "F. Sceott Fitzgerald",
         "year": 1925,
@@ -162,7 +153,7 @@
         "count": 3
     },
     {
-        "id": 19,
+        "id": 18,
         "name": "Moby Dick",
         "author": "Herman Melville",
         "year": 1851,
@@ -171,7 +162,7 @@
         "count": 2
     },
     {
-        "id": 20,
+        "id": 19,
         "name": "To Kill A Mochingbird",
         "author": "Marper Lee",
         "year": 1960,
