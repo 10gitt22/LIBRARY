@@ -24,12 +24,10 @@ export default class CardModel {
         return this.data;
     }
 
-    addCardToStorage(new_visitor_data){
-        console.log(new_visitor_data);
-        // this.data.push(new_visitor_data);
-        // localStorage.setItem('visitor_data', JSON.stringify(this.data));
+    addCardToStorage(new_card_data){
+        this.data.push(new_card_data);
+        localStorage.setItem('cards_data', JSON.stringify(this.data));
     }
-
     sortById(a, b){
         var a_id = a.id;
         var b_id = b.id;

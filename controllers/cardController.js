@@ -48,6 +48,8 @@ export default class CardController {
         } else{ 
             this.getVisitorsArr();
             this.getBooksArr();
+            // console.log(this.data_visitor, this.data_book);
+            this.data = this.model.getCards();
 
             this.view.generateAllVisitors(this.data_visitor);
             this.view.generateAllBooks(this.data_book);
@@ -62,10 +64,8 @@ export default class CardController {
         data.borrow_date = this.getTodayDate();
         data.return_date = null;
 
-        // let new_visitor_data = this.parseData(data);
-        // new_visitor_data.id = parseInt(new_visitor_data.id);
-        // this.model.editVisitorInStorage(new_visitor_data);
-        // this.init();
+        this.model.addCardToStorage(data);
+        this.init();
     }
 
     getTodayDate(){
