@@ -44,6 +44,11 @@ export default class BookModel {
         this.data = filtered_arr;
         localStorage.setItem('book_data', JSON.stringify(this.data))
     }
+    sortById(a, b){
+        var a_id = a.id;
+        var b_id = b.id;
+        return ((a_id < b_id) ? -1 : ((a_id > b_id) ? 1 : 0));
+    }
     sortByName(a, b){
         var a_name = a.name.toLowerCase();
         var b_name = b.name.toLowerCase(); 
@@ -63,6 +68,9 @@ export default class BookModel {
     }
     sort_data(value){
         switch (value) {
+            case "id":
+                this.data = this.data.sort(this.sortById)
+                break;
             case "name":
                 this.data = this.data.sort(this.sortByName)
                 break;
