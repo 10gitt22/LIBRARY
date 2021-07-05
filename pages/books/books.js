@@ -41,6 +41,11 @@ $('#book_form').submit(function(event) {
     return false;
 })
 
+$(document).on('click', '#search_btn', function() {
+    let search_string = $('#search').val();
+    bookController.search(search_string);
+})
+
 function closeModal() {
     $('.modal-background').css('display', 'none')
 }
