@@ -26,10 +26,17 @@ export default class StatisticModel {
             a[b.book_name] = (a[b.book_name] || 0) + b.count
             return a;
         }, {})
-        // res_arr = res_arr.sort(this.sortByCount);
-        let result = Object.keys(res_arr).map((key) => [{key: res_arr[key]}]);
 
-        return result;
+        let result = Object.keys(res_arr).map((key) => {
+            let obj = {
+                'book': key,
+                'count': res_arr[key]
+            }
+            return obj
+        });
+        let sorted = result.sort(this.sortByCount);
+        sorted.length = 5;
+        return sorted
     }
 
     sortByCount(a, b){
