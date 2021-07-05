@@ -70,6 +70,14 @@ export default class CardController {
         this.init();
     }
 
+    returnBook(id){
+        let index = this.data.findIndex(card => card.id == id);
+        this.data[index].return_date = this.getTodayDate();
+        this.addBook(this.data[index].book);
+        localStorage.setItem('cards_data', JSON.stringify(this.data))
+        this.init()
+    }
+
     getTodayDate(){
         let date = new Date();
         date = date.toLocaleDateString('uk')
@@ -83,8 +91,11 @@ export default class CardController {
         localStorage.setItem('book_data', JSON.stringify(books_data))
     }
 
-    addBook(bookName){
-
+    addBook(book_name){
+        let books_data = this.getBooksArr();
+        let index = books_data.findIndex(book => book.name == book_name)
+        books_data[index].count += 1;
+        localStorage.setItem('book_data', JSON.stringify(books_data)) 
     }
 
     checkInStock(book_data){

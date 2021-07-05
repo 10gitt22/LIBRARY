@@ -9,6 +9,11 @@ const cardView = new CardView(container);
 const cardController = new CardController(cardModel, cardView);
 cardController.init();
 
+$(document).on('click', '.return_btn', function(e){ 
+    let card_id = $(this).data().id;
+    cardController.returnBook(card_id);
+})
+
 $('#card_form').submit(function(event) {
     event.preventDefault();
 

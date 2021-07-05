@@ -16,7 +16,6 @@ $(document).on('click', '#add_btn', function() {
 
 $(document).on('click', '.edit_item', function() {
     let id = $(this).data().id;
-    console.log(id);
     bookController.editBook(id);
 })
 
@@ -28,7 +27,6 @@ $(document).on('click', '.delete_item', function() {
 $(document).on('click', '#sort_btn', function() {
     let value = $("#sort option:selected").text() ;
     bookController.sortController(value)
-    console.log(value);
 })
 
 $('#book_form').submit(function(event) {
