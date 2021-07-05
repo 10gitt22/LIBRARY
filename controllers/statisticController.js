@@ -8,8 +8,8 @@ export default class StatisticController {
 
     init(){
         let arr_books = this.model.top5Books(this.data);
-        console.log(arr_books);
-            // this.view.printTopBooks(arr_books);
-            // this.view.printTopVisitors(this.data);  
+        let arr_visitors = this.model.top5Visitors(this.data);
+            this.view.printTopBooks(arr_books);
+            this.view.printTopVisitors(arr_visitors);  
     }
 }

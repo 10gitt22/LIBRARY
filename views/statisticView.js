@@ -5,13 +5,13 @@ export default class StatisticView {
     }
 
     printTopBooks(data) {
-        console.log('print top books');
         let table_books = $('#stat-books');
         let str = ``;
+        let num = 1;
         data.forEach(card => {
             str  +=`
             <tr>
-                <td>${card.id}</td>
+                <td>${num++}</td>
                 <td>${card.book}</td>
             </tr>
             `
@@ -20,13 +20,13 @@ export default class StatisticView {
     }
 
     printTopVisitors(data) {
-        console.log('print top visitors');
         let table_visitors = $('#stat-visitors');
         let str = ``;
+        let num = 1;
         data.forEach(card => {
             str  +=`
             <tr>
-                <td>${card.id}</td>
+                <td>${num++}</td>
                 <td>${card.visitor}</td>
             </tr>
             `
