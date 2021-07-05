@@ -26,7 +26,11 @@ $(document).on('click', '.edit_item', function() {
 $(document).on('click', '#sort_btn', function() {
     let value = $("#sort option:selected").text();
     visitorController.sortController(value)
-    console.log(value);
+})
+
+$(document).on('click', '#search_btn', function() {
+    let search_string = $('#search').val();
+    visitorController.search(search_string);
 })
 
 $('#visitor_form').submit(function(event) {

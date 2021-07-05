@@ -2,61 +2,61 @@
     {
         "id": 1,
         "name": "Ruslan Malinovskyi",
-        "phone": "067 456 76 55"
+        "phone": "0674567655"
     },
     {
         "id": 2,
         "name": "Oleksandr Zinchenko",
-        "phone": "099 762 33 12"
+        "phone": "0997623312"
     },
     {
         "id": 3,
         "name": "Andriy Yarmolenko",
-        "phone": "068 331 12 95"
+        "phone": "0683311295"
     },
     {
         "id": 4,
         "name": "Taras Stepanenko",
-        "phone": "063 010 43 43"
+        "phone": "0630104343"
     },
     {
         "id": 5,
         "name": "Vitaliy Mykolenko",
-        "phone": "067 955 34 76"
+        "phone": "0679553476"
     },
     {
         "id": 6,
         "name": "Artem Dovbyk",
-        "phone": "096 153 47 90"
+        "phone": "0961534790"
     },
     {
         "id": 7,
         "name": "Roman Yaremchuk",
-        "phone": "066 342 70 55"
+        "phone": "0663427055"
     },
     {
         "id": 8,
         "name": "Viktor Tsygankov",
-        "phone": "063 742 01 12"
+        "phone": "0637420112"
     },
     {
         "id": 9,
         "name": "Georgiy Bushchan",
-        "phone": "067 131 21 99"
+        "phone": "0671312199"
     },
     {
         "id": 10,
         "name": "Serhiy Sydorchuk",
-        "phone": "095 710 95 25"
+        "phone": "0957109525"
     },
     {
         "id": 11,
         "name": "Artem Besiedin",
-        "phone": "097 450 00 91"
+        "phone": "0974500091"
     },
     {
         "id": 12,
         "name": "Yevhen Makarenko",
-        "phone": "097 882 88 12"
+        "phone": "0978828812"
     }
 ]

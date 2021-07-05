@@ -60,4 +60,23 @@ export default class VisitorModel {
         }
         localStorage.setItem('visitor_data', JSON.stringify(this.data))
     }
+
+    searchInStorage(string) {
+        let results;
+        string = string.toUpperCase();
+        results = this.data.filter(function(entry) {
+            let bool = false;
+            for (const key in entry) {
+                let item = entry[key];
+                if(typeof(entry[key]) != "number") {  
+                    if(key == "phone"){
+                        item = entry[key].split(" ").join('');
+                    } 
+                    bool = item.toUpperCase().includes(string);
+                    if(bool) return bool;
+                }
+            }
+        });
+        return results;
+    }
 } 
