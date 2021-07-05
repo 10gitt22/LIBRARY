@@ -11,7 +11,12 @@ export default class CardModel {
     }
 
     getDataFromStorage(){
+        let books = JSON.parse(localStorage.getItem('book_data'));
+        let visitors = JSON.parse(localStorage.getItem('visitor_data'));
         this.data = JSON.parse(localStorage.getItem('cards_data'));
+
+        let data_arr =  [{name: 'books', data: books}, {name: 'visitors', data: visitors}, {name: 'cards', data: this.data}];
+        return data_arr;
     }
 
     getCards(){

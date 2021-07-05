@@ -9,16 +9,16 @@ const cardView = new CardView(container);
 const cardController = new CardController(cardModel, cardView);
 cardController.init();
 
-// $('#visitor_form').submit(function(event) {
-//     event.preventDefault();
+$('#card_form').submit(function(event) {
+    event.preventDefault();
 
-//     visitorController.save($(this));
-//     closeModal();
-//     $('#visitor_form')[0].reset();
+    cardController.save($(this));
+    closeModal();
+    $('#card_form')[0].reset();
 
-//     return false;
-// })
+    return false;
+})
 
-// function closeModal() {
-//     $('.modal-background').css('display', 'none')
-// }
+function closeModal() {
+    $('.modal-background').css('display', 'none')
+}

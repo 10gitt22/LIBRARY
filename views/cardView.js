@@ -23,4 +23,28 @@ export default class CardView {
         });
         table.html(str);
     }
+
+    generateAllVisitors(data){
+        // console.log(data);
+        let select = $('#visitor_select');
+        let str =  ``;
+        data.forEach(visitor => {
+            str += `
+            <option value="${visitor.name}">${visitor.name}</option>
+            `
+        })
+        select.html(str);
+    }
+
+    generateAllBooks(data){
+        // console.log(data);
+        let select = $('#book_select');
+        let str =  ``;
+        data.forEach(book => {
+            str += `
+            <option value="${book.name}">${book.name}</option>
+            `
+        })
+        select.html(str);
+    }
 }

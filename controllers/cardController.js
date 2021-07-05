@@ -3,7 +3,12 @@ export default class CardController {
         this.model = model;
         this.view = view;
         this.data = this.model.getCards();
-        this.url = '../../data/cards.json';
+        this.data_visitor;
+        this.data_book;
+        this.visitors_url = '../../data/visitors.json';
+        this.books_url = '../../data/books.json';
+        this.cards_url = '../../data/cards.json';
+        
     }
     parseData(form_array){
         let obj = {};
@@ -13,37 +18,61 @@ export default class CardController {
         return obj;
     }
 
+    getVisitorsArr(){
+        let arr = this.model.getDataFromStorage();
+        this.data_visitor = arr.find(data => data.name == 'visitors').data;
+        return this.data_visitor;
+    }
+
+    getBooksArr(){
+        let arr = this.model.getDataFromStorage();
+        this.data_book = arr.find(data => data.name == 'books').data;
+        return this.data_book;
+    }
+
     init(){
         if (!localStorage.getItem('cards_data')){
-            this.model.getDataFromFile(this.url).then(data => {
-                this.view.printAllCards(data);
-                let data_for_storage = JSON.stringify(data);
-                localStorage.setItem('cards_data', data_for_storage);
-                this.data = this.model.getCards();
+            this.model.getDataFromFile(this.cards_url).then(card_data => {
+                this.model.getDataFromFile(this.books_url).then(book_data => {
+                    this.model.getDataFromFile(this.visitors_url).then(visitor_data => {
+                        this.view.generateAllBooks(book_data);
+                        this.view.generateAllVisitors(visitor_data);
+                        this.view.printAllCards(card_data);
+
+                        let data_for_storage = JSON.stringify(card_data);
+                        localStorage.setItem('cards_data', data_for_storage);
+                        this.data = this.model.getCards();
+                    })    
+                })
             })
         } else{ 
+            this.getVisitorsArr();
+            this.getBooksArr();
+
+            this.view.generateAllVisitors(this.data_visitor);
+            this.view.generateAllBooks(this.data_book);
             this.view.printAllCards(this.data);
         }
     }
 
     save(form){
-        // let data = form.serializeArray();
+        let data = form.serializeArray();
+        data = this.parseData(data)
+        data.id = this.data.length + 1;
+        data.borrow_date = this.getTodayDate();
+        data.return_date = null;
+
         // let new_visitor_data = this.parseData(data);
-        
-        // switch (this.editable) {
-        //     case true:
-        //         new_visitor_data.id = parseInt(new_visitor_data.id);
-        //         this.model.editVisitorInStorage(new_visitor_data);
-        //         break;
-        //     case false:
-        //         new_visitor_data.id = this.data.length + 1;
-        //         this.model.addVisitorToStorage(new_visitor_data)
-        //         break;
-        
-        //     default:
-        //         break;
-        // }
-        this.init();
+        // new_visitor_data.id = parseInt(new_visitor_data.id);
+        // this.model.editVisitorInStorage(new_visitor_data);
+        // this.init();
+    }
+
+    getTodayDate(){
+        let date = new Date();
+        date = date.toLocaleDateString('uk')
+        return date
+
     }
 
     sortController(selected_value){
