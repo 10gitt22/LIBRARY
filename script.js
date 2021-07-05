@@ -9,4 +9,22 @@ function toggleModal(event) {
     })
 } 
 
+async function getDataFromFile(url){
+    const resp = await fetch(url);
+    let data = await resp.json();
+    return data;
+}
+
+getDataFromFile('data/books.json').then(data => {
+    localStorage.setItem('book_data', JSON.stringify(data));
+});
+
+getDataFromFile('data/cards.json').then(data => {
+    localStorage.setItem('cards_data', JSON.stringify(data));
+});
+
+getDataFromFile('data/visitors.json').then(data => {
+    localStorage.setItem('visitor_data', JSON.stringify(data));
+});
+
 
