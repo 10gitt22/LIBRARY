@@ -44,9 +44,9 @@ export default class CardModel {
         return ((a_book < b_book) ? -1 : ((a_book > b_book) ? 1 : 0));
     }
     sortByReturnDate(a, b){
-        var a_return_date = a.return_date.toLowerCase();
-        var b_return_date = b.return_date.toLowerCase(); 
-        return ((a_return_date < b_return_date) ? -1 : ((a_return_date > b_return_date) ? 1 : 0));
+        var a_return_date = a.return_date;
+        var b_return_date = b.return_date; 
+        return (((a_return_date < b_return_date) || b_return_date == null) ? 1 : (((a_return_date > b_return_date)|| a_return_date == null )? -1 : 0));
     }
     sort_data(value){
         switch (value) {

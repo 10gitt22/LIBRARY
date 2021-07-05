@@ -9,6 +9,11 @@ const cardView = new CardView(container);
 const cardController = new CardController(cardModel, cardView);
 cardController.init();
 
+$(document).on('click', '#sort_btn', function() {
+    let value = $("#sort option:selected").text();
+    cardController.sortController(value)
+})
+
 $(document).on('click', '.return_btn', function(e){ 
     let card_id = $(this).data().id;
     cardController.returnBook(card_id);
