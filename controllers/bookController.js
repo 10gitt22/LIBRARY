@@ -5,6 +5,7 @@ export default class BookController {
         this.data = this.model.getBooks();
         this.url = '../../data/books.json';
         this.editable = null;
+        this.max_id;
     }
     parseData(form_array){
         let obj = {};
@@ -20,6 +21,7 @@ export default class BookController {
                 let data_for_storage = JSON.stringify(data);
                 localStorage.setItem('book_data', data_for_storage);
                 this.data = this.model.getBooks();
+                this.max_id = this.data[this.data.length - 1].id;
             })
         } else{ 
             this.data = this.model.getBooks();

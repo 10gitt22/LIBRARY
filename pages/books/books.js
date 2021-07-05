@@ -29,6 +29,12 @@ $(document).on('click', '#sort_btn', function() {
     bookController.sortController(value)
 })
 
+$(document).on('click', '#search_btn', function() {
+    let search_string = $('#search').val();
+    bookController.search(search_string);
+})
+
+
 $('#book_form').submit(function(event) {
     event.preventDefault();
     
@@ -37,11 +43,6 @@ $('#book_form').submit(function(event) {
     $('#book_form')[0].reset();
 
     return false;
-})
-
-$(document).on('click', '#search_btn', function() {
-    let search_string = $('#search').val();
-    bookController.search(search_string);
 })
 
 function closeModal() {
