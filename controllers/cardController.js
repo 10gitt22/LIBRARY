@@ -48,11 +48,12 @@ export default class CardController {
         } else{ 
             this.getVisitorsArr();
             this.getBooksArr();
-            // console.log(this.data_visitor, this.data_book);
             this.data = this.model.getCards();
 
+            let checkedBooks = this.checkInStock(this.data_book);
+
             this.view.generateAllVisitors(this.data_visitor);
-            this.view.generateAllBooks(this.data_book);
+            this.view.generateAllBooks(checkedBooks);
             this.view.printAllCards(this.data);
         }
     }
@@ -65,14 +66,30 @@ export default class CardController {
         data.return_date = null;
 
         this.model.addCardToStorage(data);
+        this.withdrawBook(data.book);
         this.init();
     }
 
     getTodayDate(){
         let date = new Date();
         date = date.toLocaleDateString('uk')
-        return date
+        return date;
+    }
 
+    withdrawBook(book_name){
+        let books_data = this.getBooksArr();
+        let index = books_data.findIndex(book => book.name == book_name)
+        books_data[index].count -= 1;
+        localStorage.setItem('book_data', JSON.stringify(books_data))
+    }
+
+    addBook(bookName){
+
+    }
+
+    checkInStock(book_data){
+        let sorted_arr = book_data.filter(book => book.count != 0);
+        return sorted_arr;
     }
 
     sortController(selected_value){

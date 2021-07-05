@@ -129,23 +129,9 @@ th, td{
     box-shadow: inset 0 0 25px -15px rgb(0, 0, 0);
 }
 
-/* .edit_item:hover .table_icon, .delete_item:hover .table_icon{
-    fill: #fff;
-} */
-
-
-/* 
-#edit_img:hover{
-    fill: rgb(114, 162, 250);
+.cell_center{
+    text-align: center;
 }
-
-#delete_img{
-    width: 20px;
-} */
-
-/* #delete_img:hover{
-    fill: salmon;
-} */
 
 .data{
     overflow: hidden;
@@ -159,7 +145,6 @@ th, td{
 
 .data tr:hover{
     cursor: pointer;
-    
 }
 
 .data tr td{
