@@ -1,0 +1,282 @@
+[
+    {
+        "id": 1,
+        "visitor": "Yevhen Makarenko",
+        "book": "Kobzar",
+        "borrow_date": "03.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 2,
+        "visitor": "Yevhen Makarenko",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 3,
+        "visitor": "Yevhen Makarenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "04.06.2021"
+    },
+    {
+        "id": 4,
+        "visitor": "Artem Besiedin",
+        "book": "Harry Potter and the Philosopher's Stone",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.24.2021"
+    },
+    {
+        "id": 5,
+        "visitor": "Artem Besiedin",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 6,
+        "visitor": "Artem Besiedin",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 7,
+        "visitor": "Serhiy Sydorchuk",
+        "book": "Harry Potter and the Philosopher's Stone",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 8,
+        "visitor": "Serhiy Sydorchuk",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "03.01.2021"
+    },
+    {
+        "id": 9,
+        "visitor": "Serhiy Sydorchuk",
+        "book": "Kobzar",
+        "borrow_date": "03.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 10,
+        "visitor": "Georgiy Bushchan",
+        "book": "Harry Potter and the Philosopher's Stone",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 11,
+        "visitor": "Georgiy Bushchan",
+        "book": "The Little Prince",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.25.2021"
+    },
+    {
+        "id": 12,
+        "visitor": "Georgiy Bushchan",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 13,
+        "visitor": "Viktor Tsygankov",
+        "book": "The Little Prince",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.17.2021"
+    },
+    {
+        "id": 14,
+        "visitor": "Viktor Tsygankov",
+        "book": "Me Befor You",
+        "borrow_date": "03.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 15,
+        "visitor": "Viktor Tsygankov",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 16,
+        "visitor": "Roman Yaremchuk",
+        "book": "The Little Prince",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.12.2021"
+    },
+    {
+        "id": 17,
+        "visitor": "Roman Yaremchuk",
+        "book": "The Secret",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 18,
+        "visitor": "Roman Yaremchuk",
+        "book": "The Secret",
+        "borrow_date": "02.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 19,
+        "visitor": "Roman Yaremchuk",
+        "book": "Kobzar",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.05.2021"
+    },
+    {
+        "id": 20,
+        "visitor": "Artem Dovbyk",
+        "book": "Da Vince Code",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.01.2021"
+    },
+    {
+        "id": 21,
+        "visitor": "Artem Dovbyk",
+        "book": "Fifty Shades of Grey",
+        "borrow_date": "03.07.2021",
+        "return_date": null
+    },
+    {
+        "id": 22,
+        "visitor": "Artem Dovbyk",
+        "book": "Mockingjay",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.17.2021"
+    },
+    {
+        "id": 23,
+        "visitor": "Vitaliy Mykolenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.19.2021"
+    },
+    {
+        "id": 24,
+        "visitor": "Vitaliy Mykolenko",
+        "book": "The Girl On The Train",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.09.2021"
+    },
+    {
+        "id": 25,
+        "visitor": "Vitaliy Mykolenko",
+        "book": "Dear John",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 26,
+        "visitor": "Taras Stepanenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.09.2021"
+    },
+    {
+        "id": 27,
+        "visitor": "Taras Stepanenko",
+        "book": "Ready Player One",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 28,
+        "visitor": "Taras Stepanenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.23.2021"
+    },
+    {
+        "id": 29,
+        "visitor": "Ruslan Malinovskyi",
+        "book": "The 5th Wave",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.11.2021"
+    },
+    {
+        "id": 30,
+        "visitor": "Oleksandr Zinchenko",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.17.2021"
+    },
+    {
+        "id": 31,
+        "visitor": "Ruslan Malinovskyi",
+        "book": "Savages",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.15.2021"
+    },
+    {
+        "id": 32,
+        "visitor": "Taras Stepanenko",
+        "book": "The Fellowship Of The Ring",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 33,
+        "visitor": "Taras Stepanenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.11.2021"
+    },
+    {
+        "id": 34,
+        "visitor": "Taras Stepanenko",
+        "book": "The Great Gatsby",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.27.2021"
+    },
+    {
+        "id": 35,
+        "visitor": "Andriy Yarmolenko",
+        "book": "To Kill A Mochingbird",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 36,
+        "visitor": "Andriy Yarmolenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "02.23.2021"
+    },
+    {
+        "id": 37,
+        "visitor": "Andriy Yarmolenko",
+        "book": "Alex Ferguson: My Autobiography",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    },
+    {
+        "id": 38,
+        "visitor": "Oleksandr Zinchenko",
+        "book": "I Am Football",
+        "borrow_date": "02.07.2021",
+        "return_date": "03.03.2021"
+    },
+    {
+        "id": 39,
+        "visitor": "Oleksandr Zinchenko",
+        "book": "The Great Gatsby",
+        "borrow_date": "03.07.2021",
+        "return_date": "03.16.2021"
+    },
+    {
+        "id": 40,
+        "visitor": "Ruslan Malinovskyi",
+        "book": "Moby Dick",
+        "borrow_date": "03.07.2021",
+        "return_date": "04.07.2021"
+    }
+]
