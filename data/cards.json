@@ -18,14 +18,14 @@
         "visitor": "Yevhen Makarenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "04.06.2021"
+        "return_date": "04.07.2021"
     },
     {
         "id": 4,
         "visitor": "Artem Besiedin",
         "book": "Harry Potter and the Philosopher's Stone",
         "borrow_date": "03.07.2021",
-        "return_date": "03.24.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 5,
@@ -53,7 +53,7 @@
         "visitor": "Serhiy Sydorchuk",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "03.01.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 9,
@@ -74,7 +74,7 @@
         "visitor": "Georgiy Bushchan",
         "book": "The Little Prince",
         "borrow_date": "03.07.2021",
-        "return_date": "04.25.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 12,
@@ -88,7 +88,7 @@
         "visitor": "Viktor Tsygankov",
         "book": "The Little Prince",
         "borrow_date": "02.07.2021",
-        "return_date": "02.17.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "visitor": "Roman Yaremchuk",
         "book": "The Little Prince",
         "borrow_date": "02.07.2021",
-        "return_date": "02.12.2021"
+        "return_date": null
     },
     {
         "id": 17,
@@ -130,14 +130,14 @@
         "visitor": "Roman Yaremchuk",
         "book": "Kobzar",
         "borrow_date": "03.07.2021",
-        "return_date": "04.05.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 20,
         "visitor": "Artem Dovbyk",
         "book": "Da Vince Code",
         "borrow_date": "03.07.2021",
-        "return_date": "04.01.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 21,
@@ -151,21 +151,21 @@
         "visitor": "Artem Dovbyk",
         "book": "Mockingjay",
         "borrow_date": "03.07.2021",
-        "return_date": "03.17.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 23,
         "visitor": "Vitaliy Mykolenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "02.19.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 24,
         "visitor": "Vitaliy Mykolenko",
         "book": "The Girl On The Train",
         "borrow_date": "03.07.2021",
-        "return_date": "03.09.2021"
+        "return_date": null
     },
     {
         "id": 25,
@@ -179,7 +179,7 @@
         "visitor": "Taras Stepanenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "02.09.2021"
+        "return_date": null
     },
     {
         "id": 27,
@@ -193,28 +193,28 @@
         "visitor": "Taras Stepanenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "02.23.2021"
+        "return_date": null
     },
     {
         "id": 29,
         "visitor": "Ruslan Malinovskyi",
         "book": "The 5th Wave",
         "borrow_date": "03.07.2021",
-        "return_date": "03.11.2021"
+        "return_date": null
     },
     {
         "id": 30,
         "visitor": "Oleksandr Zinchenko",
         "book": "Alex Ferguson: My Autobiography",
         "borrow_date": "03.07.2021",
-        "return_date": "04.17.2021"
+        "return_date": null
     },
     {
         "id": 31,
         "visitor": "Ruslan Malinovskyi",
         "book": "Savages",
         "borrow_date": "03.07.2021",
-        "return_date": "03.15.2021"
+        "return_date": "05.07.2021"
     },
     {
         "id": 32,
@@ -228,14 +228,14 @@
         "visitor": "Taras Stepanenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "02.11.2021"
+        "return_date": "04.07.2021"
     },
     {
         "id": 34,
         "visitor": "Taras Stepanenko",
         "book": "The Great Gatsby",
         "borrow_date": "03.07.2021",
-        "return_date": "03.27.2021"
+        "return_date": "04.07.2021"
     },
     {
         "id": 35,
@@ -249,7 +249,7 @@
         "visitor": "Andriy Yarmolenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "02.23.2021"
+        "return_date": "04.07.2021"
     },
     {
         "id": 37,
@@ -263,14 +263,14 @@
         "visitor": "Oleksandr Zinchenko",
         "book": "I Am Football",
         "borrow_date": "02.07.2021",
-        "return_date": "03.03.2021"
+        "return_date": "04.07.2021"
     },
     {
         "id": 39,
         "visitor": "Oleksandr Zinchenko",
         "book": "The Great Gatsby",
         "borrow_date": "03.07.2021",
-        "return_date": "03.16.2021"
+        "return_date": "04.07.2021"
     },
     {
         "id": 40,
