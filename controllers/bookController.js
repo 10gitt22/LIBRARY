@@ -26,6 +26,7 @@ export default class BookController {
         } else{ 
             this.data = this.model.getBooks();
             this.view.printAllBooks(this.data);
+            this.max_id = this.data[this.data.length - 1].id;
         }
     }
 
@@ -61,7 +62,7 @@ export default class BookController {
                 this.model.editBookInStorage(new_book_data);
                 break;
             case false:
-                new_book_data.id = this.data.length + 1;
+                new_book_data.id = this.max_id + 1;
                 this.model.addBookToStorage(new_book_data);
                 break;
         

@@ -8,6 +8,7 @@ export default class CardController {
         this.visitors_url = '../../data/visitors.json';
         this.books_url = '../../data/books.json';
         this.cards_url = '../../data/cards.json';
+        this.max_id;
         
     }
     parseData(form_array){
@@ -42,6 +43,7 @@ export default class CardController {
                         let data_for_storage = JSON.stringify(card_data);
                         localStorage.setItem('cards_data', data_for_storage);
                         this.data = this.model.getCards();
+                        this.max_id = this.data[this.data.length - 1].id;
                     })    
                 })
             })
@@ -55,13 +57,14 @@ export default class CardController {
             this.view.generateAllVisitors(this.data_visitor);
             this.view.generateAllBooks(checkedBooks);
             this.view.printAllCards(this.data);
+            this.max_id = this.data[this.data.length - 1].id;
         }
     }
 
     save(form){
         let data = form.serializeArray();
         data = this.parseData(data)
-        data.id = this.data.length + 1;
+        data.id = this.max_id + 1;
         data.borrow_date = this.getTodayDate();
         data.return_date = null;
 

@@ -6,6 +6,7 @@ export default class VisitorController {
         this.url = '../../data/visitors.json';
         this.editable = false;
         this.editable_item = null;
+        this.max_id;
     }
     parseData(form_array){
         let obj = {};
@@ -21,9 +22,12 @@ export default class VisitorController {
                 let data_for_storage = JSON.stringify(data);
                 localStorage.setItem('visitor_data', data_for_storage);
                 this.data = this.model.getVisitors();
+                this.max_id = this.data[this.data.length - 1].id;
             })
         } else{ 
+            this.data = this.model.getVisitors();
             this.view.printAllVisitors(this.data);
+            this.max_id = this.data[this.data.length - 1].id;
         }
     }
 
@@ -49,7 +53,7 @@ export default class VisitorController {
                 this.model.editVisitorInStorage(new_visitor_data);
                 break;
             case false:
-                new_visitor_data.id = this.data.length + 1;
+                new_visitor_data.id = this.max_id + 1;
                 this.model.addVisitorToStorage(new_visitor_data)
                 break;
         
