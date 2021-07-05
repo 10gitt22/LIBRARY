@@ -107,4 +107,10 @@ export default class CardController {
         this.model.sort_data(selected_value)
         this.init();
     }
+
+    search(search_string){
+        let item = [];
+        item = this.model.searchInStorage(search_string);
+        this.view.printAllCards(item);
+    }
 }
