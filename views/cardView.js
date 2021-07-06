@@ -4,7 +4,6 @@ export default class CardView {
     }
 
     printAllCards(data){
-        // console.log(data);
         let table = $('#cards');
         let str = ``;
         data.forEach(card => {
@@ -30,7 +29,6 @@ export default class CardView {
     }
 
     generateAllVisitors(data){
-        // console.log(data);
         let select = $('#visitor_select');
         let str =  ``;
         data.forEach(visitor => {
@@ -42,7 +40,6 @@ export default class CardView {
     }
 
     generateAllBooks(data){
-        // console.log(data);
         let select = $('#book_select');
         let str =  ``;
         data.forEach(book => {

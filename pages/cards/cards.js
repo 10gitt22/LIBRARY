@@ -19,6 +19,11 @@ $(document).on('click', '#search_btn', function() {
     cardController.search(search_string);
 })
 
+$(document).on('keyup', '#search', function() {
+    let search_string = $('#search').val();
+    cardController.search(search_string);
+})
+
 $(document).on('click', '.return_btn', function(e){ 
     let card_id = $(this).data().id;
     cardController.returnBook(card_id);

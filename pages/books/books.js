@@ -34,6 +34,10 @@ $(document).on('click', '#search_btn', function() {
     bookController.search(search_string);
 })
 
+$(document).on('keyup', '#search', function() {
+    let search_string = $('#search').val();
+    bookController.search(search_string);
+})
 
 $('#book_form').submit(function(event) {
     event.preventDefault();

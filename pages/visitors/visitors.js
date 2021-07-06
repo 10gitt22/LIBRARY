@@ -33,6 +33,12 @@ $(document).on('click', '#search_btn', function() {
     visitorController.search(search_string);
 })
 
+$(document).on('keyup', '#search', function() {
+    let search_string = $('#search').val();
+    visitorController.search(search_string);
+})
+
+
 $('#visitor_form').submit(function(event) {
     event.preventDefault();
 
