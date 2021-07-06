@@ -4,7 +4,9 @@ export default class VisitorView {
     }
 
     printAllVisitors(data){
+        $('table').css({'width': '80%'})
         let table = $('#visitors');
+        
         let str = ``;
         data.forEach(visitor => {
             str += `

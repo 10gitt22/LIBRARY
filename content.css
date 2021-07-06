@@ -28,23 +28,35 @@
 }
 
 .grid-container .block{
-    width: 100%;
-    height: 100%;
-    font-weight: 900;
+    width: 90%;
+    height: 90%;
     font-size: 60px;
-    background-color: rgb(214, 214, 214);
+    border: 1px solid #232323;
+    box-shadow: 10px 10px #232323;
+    color: #232323;
+    transition: .3s ease;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;  
+}
+
+.block:hover{
+    box-shadow: 0 0 #232323;
+}
+
+.block:hover .link_block{
+    font-size: 65px;
 }
 
 .link_block{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #232323;
+    transition: .3s linear;
     width: 100%;
     height: 100%;
-    color: rgb(153, 153, 153);
+    
 }
 
 #books { 
@@ -82,6 +94,8 @@
 }
 
 .table-section{
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: calc(100vh - 180px);
     padding-top: 20px;
@@ -105,7 +119,7 @@ background: #ccc;
   
 
 table thead tr{ 
-    background-color: #fff;
+    color: #232323;
 }
 
 th{
@@ -121,8 +135,25 @@ th, td{
     padding-left: 0;
     padding-right: 0;
     text-align: center;
-    box-shadow: inset 0 0 20px -15px #000;
     transition: .2s linear;
+}
+
+.edit_item svg{
+    fill: rgb(122, 122, 122);
+    transition: .3s ease;
+}
+
+.edit_item:hover svg{
+    fill: rgb(0, 0, 0);
+}
+
+.delete_item svg{
+    fill: rgb(248, 159, 149);
+    transition: .3s ease;
+}
+
+.delete_item:hover svg{
+    fill: rgb(252, 103, 87);
 }
 
 .table_icon{
@@ -132,9 +163,6 @@ th, td{
     fill: rgb(133, 133, 133);
 }
 
-.edit_item:hover, .delete_item:hover{
-    box-shadow: inset 0 0 25px -15px rgb(0, 0, 0);
-}
 
 .cell_center{
     text-align: center;
@@ -142,13 +170,17 @@ th, td{
 
 .data{
     overflow: hidden;
+    
 }
 
 .data tr{
-    box-shadow: 0 0 10px -5px#000;
+    box-shadow: 0px 3px 5px -4px #000;
     margin-top: 10px;   
     transition: .5s ease;
+    /* background-color: #fff; */
 }
+
+
 
 .data tr:hover{
     cursor: pointer;
@@ -156,4 +188,17 @@ th, td{
 
 .data tr td{
     padding: 15px 30px;
+    color: #3d3d3d;
+}
+
+.place1{
+    background-color: rgb(255, 234, 112);
+}
+
+.place2{
+    background-color: rgb(206, 206, 206);
+}
+
+.place3{
+    background-color: rgb(255, 207, 145);
 }

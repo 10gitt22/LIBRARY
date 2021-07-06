@@ -7,11 +7,12 @@ export default class StatisticView {
     printTopBooks(data) {
         let table_books = $('#stat-books');
         let str = ``;
-        let num = 1;
+        let num = 0;
         data.forEach(card => {
+            num += 1
             str  +=`
-            <tr>
-                <td>${num++}</td>
+            <tr class="place${num}">
+                <td>${num}</td>
                 <td>${card.book}</td>
             </tr>
             `
@@ -22,11 +23,12 @@ export default class StatisticView {
     printTopVisitors(data) {
         let table_visitors = $('#stat-visitors');
         let str = ``;
-        let num = 1;
+        let num = 0;
         data.forEach(card => {
+            num += 1
             str  +=`
-            <tr>
-                <td>${num++}</td>
+            <tr class="place${num}">
+                <td>${num}</td>
                 <td>${card.visitor}</td>
             </tr>
             `
