@@ -75,9 +75,11 @@ export default class CardModel {
             let bool = false;
             for (const key in entry) {
                 let item = entry[key];
-                if (typeof (entry[key]) != "number") {
-                    bool = item.toUpperCase().includes(string);
-                    if (bool) return bool;
+                if ((typeof (item) != "number")) {
+                    if (item != null){
+                        bool = item.toUpperCase().includes(string);
+                        if (bool) return bool;
+                    }   
                 }
             }
         });

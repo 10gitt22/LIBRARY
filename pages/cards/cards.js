@@ -21,6 +21,7 @@ $(document).on('click', '#search_btn', function() {
 
 $(document).on('keyup', '#search', function() {
     let search_string = $('#search').val();
+    console.log(search_string);
     cardController.search(search_string);
 })
 
