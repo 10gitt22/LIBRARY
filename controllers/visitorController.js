@@ -22,12 +22,12 @@ export default class VisitorController {
                 let data_for_storage = JSON.stringify(data);
                 localStorage.setItem('visitor_data', data_for_storage);
                 this.data = this.model.getVisitors();
-                this.max_id = this.data[this.data.length - 1].id;
+                this.max_id = this.findMaxId(this.data);
             })
         } else{ 
             this.data = this.model.getVisitors();
             this.view.printAllVisitors(this.data);
-            this.max_id = this.data[this.data.length - 1].id;
+            this.max_id = this.findMaxId(this.data);
         }
     }
 
@@ -72,5 +72,13 @@ export default class VisitorController {
         let item = [];
         item = this.model.searchInStorage(search_string);
         this.view.printAllVisitors(item);
+    }
+
+    findMaxId(arr){
+        let max = 0;
+        arr.forEach(item => {
+            max < item.id ? max = item.id : max;
+        })
+        return max;
     }
 }

@@ -21,12 +21,12 @@ export default class BookController {
                 let data_for_storage = JSON.stringify(data);
                 localStorage.setItem('book_data', data_for_storage);
                 this.data = this.model.getBooks();
-                this.max_id = this.data[this.data.length - 1].id;
+                this.max_id = this.findMaxId(this.data);
             })
         } else{ 
             this.data = this.model.getBooks();
             this.view.printAllBooks(this.data);
-            this.max_id = this.data[this.data.length - 1].id;
+            this.max_id = this.findMaxId(this.data);
         }
     }
 
@@ -81,5 +81,13 @@ export default class BookController {
         let item = [];
         item = this.model.searchInStorage(search_string);
         this.view.printAllBooks(item);
+    }
+
+    findMaxId(arr){
+        let max = 0;
+        arr.forEach(item => {
+            max < item.id ? max = item.id : max;
+        })
+        return max;
     }
 }

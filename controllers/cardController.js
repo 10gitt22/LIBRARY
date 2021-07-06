@@ -43,7 +43,7 @@ export default class CardController {
                         let data_for_storage = JSON.stringify(card_data);
                         localStorage.setItem('cards_data', data_for_storage);
                         this.data = this.model.getCards();
-                        this.max_id = this.data[this.data.length - 1].id;
+                        this.max_id = this.findMaxId(this.data);
                     })    
                 })
             })
@@ -57,7 +57,7 @@ export default class CardController {
             this.view.generateAllVisitors(this.data_visitor);
             this.view.generateAllBooks(checkedBooks);
             this.view.printAllCards(this.data);
-            this.max_id = this.data[this.data.length - 1].id;
+            this.max_id = this.findMaxId(this.data);
         }
     }
 
@@ -115,5 +115,13 @@ export default class CardController {
         let item = [];
         item = this.model.searchInStorage(search_string);
         this.view.printAllCards(item);
+    }
+
+    findMaxId(arr){
+        let max = 0;
+        arr.forEach(item => {
+            max < item.id ? max = item.id : max;
+        })
+        return max;
     }
 }
